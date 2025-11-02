@@ -1,6 +1,9 @@
 # CalculoVelocidad_PIC16F917
 Este es un proyecto simple que enciende un LED cuando se preciona un botón, y enciende el otro cuando se mide una velocidad superior a 800 RMP a través de un encoder usando un Pic16f917.
 
+## Circuito
+
+![Texto alternativo](circuito.png)
 
 ## Demostración de funcionamiento
 
