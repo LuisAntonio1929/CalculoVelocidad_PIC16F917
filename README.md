@@ -38,7 +38,6 @@ Número de vueltas:
 $$
 N_{vueltas} = \frac{N_{pulsos}}{100}
 $$
-
 Velocidad en RPM:
 
 $$
@@ -83,3 +82,29 @@ INTCON.PEIE ← 1     // Peripheral interrupt enable
 INTCON.TMR0IE ← 1   // TMR0 interrupt enable
 INTCON.INT0IE ← 1   // External interrupt enable
 PIE1.TMR1IE ← 1     // TMR1 interrupt enable
+
+// Bucle principal
+Hacer nada.
+
+// Rutinas de interrupción
+
+// INTERRUPCIÓN EXTERNA (RB0)
+Esperar 20 ms (antirrebote)
+Si RB0 = 0:
+    Alternar LED1
+Limpiar bandera INT
+
+// INTERRUPCIÓN TMR0
+pulsos ← pulsos + 256
+Limpiar bandera TMR0
+
+// INTERRUPCIÓN TMR1
+velocidad ← (pulsos + TMR0) × 6
+Si velocidad > 800:
+    LED2 ← 1
+Sino:
+    LED2 ← 0
+pulsos ← 0
+TMR0 ← 0
+Recargar TMR1 ← 15535
+Limpiar bandera TMR1
