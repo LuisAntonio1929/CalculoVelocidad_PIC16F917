@@ -4,7 +4,7 @@ Este es un proyecto simple para calcular la velocidad de un motor a partir de su
 
 ## Demostración de funcionamiento
 
-![Animación de velocidad](velocidad.gif
+![Animación de velocidad](velocidad.gif)
 
 
 ## Cálculos previos
