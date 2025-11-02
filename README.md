@@ -47,6 +47,7 @@ Número de vueltas:
 $$
 N_{vueltas} = \frac{N_{pulsos}}{100}
 $$
+
 Velocidad en RPM:
 
 $$
